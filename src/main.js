@@ -5,6 +5,7 @@ import {fas} from '@fortawesome/free-solid-svg-icons';
 import {far} from '@fortawesome/free-regular-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import {router} from '@/router'
+import httpClient from './plugins/httpClient';
 
 library.add(fas);
 library.add(far);
@@ -19,4 +20,5 @@ app
     .use(BootstrapVue3)
     .component("font-awesome-icon", FontAwesomeIcon)
 app.use(router)
+app.use(httpClient, process.env.VUE_APP_BASE_URL)
 app.mount('#app')
