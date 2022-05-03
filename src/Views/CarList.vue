@@ -16,6 +16,12 @@
       <th>
         Количество мест
       </th>
+      <th>
+        Бренд
+      </th>
+      <th>
+        Кузов
+      </th>
       <th></th>
     </tr>
     </thead>
@@ -24,6 +30,8 @@
       <td>{{ car.id }}</td>
       <td>{{ car.name }}</td>
       <td>{{ car.seatsCount }}</td>
+      <td>{{ car.brandName }}</td>
+      <td>{{ car.bodyName }}</td>
       <td>
         <div class="d-flex">
           <div class="me-2">

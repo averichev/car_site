@@ -53,7 +53,9 @@ export default {
         seatsCount: null,
         url: null,
         body: null,
-        brand: null
+        brand: null,
+        brandName: null,
+        bodyName: null
       },
       formData: {
         brands: {
