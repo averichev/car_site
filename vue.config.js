@@ -31,7 +31,7 @@ module.exports = defineConfig({
     } : undefined,
     sourceMap: true,
   },
-  outputDir: path.resolve(__dirname, './wwwroot/app'),
-  publicPath: '/app/',
+  outputDir: path.resolve(__dirname, './wwwroot'),
+  publicPath: '/',
   productionSourceMap: false,
 })
