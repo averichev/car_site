@@ -24,6 +24,7 @@
                 id="seatsCount"
                 v-model="form.seatsCount"
                 required
+                type="number"
             ></b-form-input>
           </b-form-group>
           <b-form-group label="Url" label-for="url">
@@ -95,6 +96,9 @@ export default {
             router.push({name: 'home'})
           })
           .catch((error) => {
+            if (error.response.status === 422) {
+              alert(error.response.data.errors.join(''))
+            }
             console.log(error)
           })
     }
