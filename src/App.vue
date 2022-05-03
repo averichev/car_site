@@ -22,6 +22,9 @@
             <router-link :to="{ name: 'brand_list'}" class="nav-link px-2" exact-active-class="text-secondary">Бренды</router-link>
           </li>
           <li>
+            <router-link :to="{ name: 'body_list'}" class="nav-link px-2" exact-active-class="text-secondary">Кузова</router-link>
+          </li>
+          <li>
             <router-link :to="{ name: 'about'}" class="nav-link px-2" exact-active-class="text-secondary">О
               проекте
             </router-link>

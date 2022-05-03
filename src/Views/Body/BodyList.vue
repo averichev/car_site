@@ -1,8 +1,8 @@
 <template>
-  <h1>Бренды</h1>
-  <router-link class="btn btn-sm btn-outline-info" :to="{ name: 'create_brand'}">
+  <h1>Кузова</h1>
+  <router-link class="btn btn-sm btn-outline-info" :to="{ name: 'create_body'}">
     <i class="fas fa-plus"></i>
-    Добавить бренд
+    Добавить тип кузова
   </router-link>
   <table class="table table-striped w-auto">
     <thead>
@@ -16,9 +16,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr v-for="brand in brands" :key="brand.id">
-      <td>{{ brand.id }}</td>
-      <td>{{ brand.name }}</td>
+    <tr v-for="body in bodies" :key="body.id">
+      <td>{{ body.id }}</td>
+      <td>{{ body.name }}</td>
     </tr>
     </tbody>
   </table>
@@ -26,18 +26,18 @@
 
 <script>
 export default {
-  name: "BrandList",
+  name: "BodyList",
   data() {
     return {
-      brands: []
+      bodies: []
     }
   },
   mounted() {
     const self = this
     this.$httpClient
-        .get('/api/brands')
+        .get('/api/bodies')
         .then((response) => {
-          self.brands = response.data.list
+          self.bodies = response.data.list
         })
   }
 }

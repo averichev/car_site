@@ -23,6 +23,12 @@ export default {
             post(path, data) {
                 return client.post(path, data);
             },
+            get(path) {
+                return client.get(path);
+            },
+            delete(path, data) {
+                return client.delete(path, data);
+            },
         }
     }
 }
